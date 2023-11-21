@@ -37,13 +37,18 @@ jobs:
         run: |
           python setup.py sdist
           python setup.py bdist_wheel
-          
+
+      - name: Publish to PyPI
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+
       - name: Uploading the distribution archives
         run: | 
           python -m twine upload  --repository-url https://upload.pypi.org/legacy/ dist/*
-          with:
-            username: ${{ secrets.PYPI_API_USERNAME }}
-            password: ${{ secrets.PYPI_API_TOKEN }}
+          # with:
+          #   username: ${{ secrets.PYPI_API_USERNAME }}
+          #   password: ${{ secrets.PYPI_API_TOKEN }}
             
 
       # - name: Publish distribution to PyPI
