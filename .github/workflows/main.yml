@@ -43,6 +43,6 @@ jobs:
           python -m twine upload  --repository-url https://upload.pypi.org/legacy/ dist/*
           
       - name: Publish package
-        uses: pypa/gh-action-pypi-publish@v1
+        uses: pypa/gh-action-pypi-publish@v2
         with:
           password: ${{ secrets.PYPI_API_TOKEN }}
