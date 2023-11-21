@@ -34,5 +34,3 @@ jobs:
         run: |
           python3 -m coverage report -m
       
-      - name: Use Secret
-        run: echo "The secret value is ${{ secrets.PYPI_API_TOKEN }}"
