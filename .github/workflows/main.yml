@@ -25,3 +25,10 @@ jobs:
           pip install wheel
           python3 -m pip install --upgrade build
           python3 -m pip install --upgrade twine
+      - name: Test with pytest
+        run: |
+          python3 -m pytest
+
+      - name : Generate Coverage Report
+        run: |
+          python3 -m coverage report -m
