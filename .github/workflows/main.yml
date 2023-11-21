@@ -32,3 +32,8 @@ jobs:
       - name : Generate Coverage Report
         run: |
           python3 -m coverage report -m
+
+      - name: Generating distribution archives
+        run: |
+          python setup.py sdist
+          python setup.py bdist_wheel
