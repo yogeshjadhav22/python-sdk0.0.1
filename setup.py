@@ -31,6 +31,6 @@ setup(
         "Programming Language :: Python :: 3.11",
     ],
      project_urls={
-        'Source': '',
+        'Source': 'https://github.com/yogeshjadhav22/python-sdk0.0.1',
     },
 )
