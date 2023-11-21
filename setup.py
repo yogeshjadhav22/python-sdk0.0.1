@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 from os.path import dirname, join
 
 setup(
-    name='zvolvArithmetic',
-    version='0.1.2',
+    name='zvolvArithmeticzz',
+    version='0.1.3',
     license='MIT',
     description='Official Zvolv Arithmetic Python SDK',
     long_description_content_type="text/markdown",
