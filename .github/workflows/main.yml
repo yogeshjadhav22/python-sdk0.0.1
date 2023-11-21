@@ -37,3 +37,12 @@ jobs:
         run: |
           python setup.py sdist
           python setup.py bdist_wheel
+          
+      - name: Uploading the distribution archives
+        run: | 
+          python -m twine upload  --repository-url https://upload.pypi.org/legacy/ dist/*
+          
+      - name: Publish package
+        uses: pypa/gh-action-pypi-publish@v1
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}
