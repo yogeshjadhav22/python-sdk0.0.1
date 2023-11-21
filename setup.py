@@ -3,7 +3,7 @@ from os.path import dirname, join
 
 setup(
     name='zvolvArithmeticzz',
-    version='0.1.4',
+    version='0.1.5',
     license='MIT',
     description='Official Zvolv Arithmetic Python SDK',
     long_description_content_type="text/markdown",
